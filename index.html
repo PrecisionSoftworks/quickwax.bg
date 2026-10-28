@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#121212">
+  <meta name="description" content="Quickwax България — сайтът е в изработка.">
+  <title>Quickwax България</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23e51b1f'/%3E%3Ctext x='16' y='23' font-family='system-ui,sans-serif' font-size='19' font-weight='700' fill='%23fff' text-anchor='middle'%3EQ%3C/text%3E%3C/svg%3E">
+
+  <style>
+    :root {
+      --bg: #121212;
+      --text: #f4f4f4;
+      --muted: #8f8f8f;
+      --red: #e51b1f;
+      --line: #2b2b2b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      min-height: 100dvh;
+      padding: 32px 24px;
+      overflow: hidden;
+      background: var(--bg);
+      background-image: radial-gradient(
+        700px 420px at 50% 0%,
+        rgba(229, 27, 31, 0.14),
+        transparent 70%
+      );
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .box {
+      width: 100%;
+      max-width: 460px;
+    }
+
+    .brand {
+      display: inline-block;
+      margin-bottom: 40px;
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      transition: transform 0.25s ease, text-shadow 0.25s ease;
+    }
+
+    .brand:hover {
+      transform: translateY(-3px);
+      text-shadow: 0 0 22px rgba(229, 27, 31, 0.55);
+    }
+
+    .brand span {
+      color: var(--red);
+    }
+
+    h1 {
+      font-size: clamp(26px, 6vw, 40px);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.6px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .rule {
+      width: 40px;
+      height: 2px;
+      margin: 34px auto 30px;
+      background: var(--red);
+      border-radius: 2px;
+    }
+
+    .contact {
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.9;
+    }
+
+    .contact strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .map-link {
+      color: var(--red);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(229, 27, 31, 0.45);
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .map-link:hover,
+    .map-link:focus-visible {
+      color: #ff4b4f;
+      border-color: #ff4b4f;
+    }
+
+    @media (max-height: 520px) {
+      .brand {
+        margin-bottom: 24px;
+      }
+
+      .rule {
+        margin: 22px auto 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .brand {
+        transition: none;
+      }
+
+      .brand:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="box">
+    <span class="brand">Quickwax<span>.bg</span></span>
+
+    <h1>Сайтът е в изработка</h1>
+
+    <p>
+      За поръчки моля използвайте нашите контакти или елате във
+      <a class="map-link" href="https://maps.app.goo.gl/qB686QSoXybuo7rHA"
+         target="_blank" rel="noopener">физическия ни магазин</a>.
+    </p>
+
+    <div class="rule" aria-hidden="true"></div>
+
+    <p class="contact">
+      <strong>sebaydinov.quickwax@gmail.com</strong><br>
+      <strong>+359 87 849 3448</strong>
+    </p>
+  </main>
+</body>
+</html>
