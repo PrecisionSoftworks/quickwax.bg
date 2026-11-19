@@ -4,32 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#121212">
-  <meta name="description" content="Сайтът на Quickwax България е в изработка. Каталогът и цените излизат скоро. За поръчки: sebaydinov.quickwax@gmail.com, +359 87 849 3448.">
-  <title>Quickwax България — сайтът е в изработка</title>
+  <meta name="description" content="Каталогът на QuickWax България: препарати за миене, активни пяни, безконтактни шампоани, восъци, грижа за джанти и интериор. За поръчки: sebaydinov.quickwax@gmail.com, +359 87 849 3448.">
+  <meta name="keywords" content="QuickWax, автокозметика, каталог, пяна, шампоан, восък, car care, България, МОЗЕРА ООД">
+  <title>QuickWax България — Каталог на професионална автокозметика (PDF)</title>
   <link rel="canonical" href="https://quickwax.bg/">
+  <link rel="alternate" type="application/pdf" href="QuickWax_catalog.pdf" title="QuickWax Каталог (PDF)">
+
+  <!-- Instant redirect to the catalog PDF -->
+  <meta http-equiv="refresh" content="0; url=QuickWax_catalog.pdf">
+  <script>location.replace("QuickWax_catalog.pdf");</script>
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Quickwax България">
+  <meta property="og:site_name" content="QuickWax България">
   <meta property="og:locale" content="bg_BG">
   <meta property="og:url" content="https://quickwax.bg/">
-  <meta property="og:title" content="Quickwax България — сайтът е в изработка">
-  <meta property="og:description" content="Каталогът и цените излизат скоро. За поръчки: sebaydinov.quickwax@gmail.com, +359 87 849 3448.">
+  <meta property="og:title" content="QuickWax България — Каталог на професионална автокозметика">
+  <meta property="og:description" content="Препарати за миене, активни пяни, восъци и грижа за интериора. Отворете каталога (PDF). За поръчки: +359 87 849 3448.">
   <meta property="og:image" content="https://quickwax.bg/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Quickwax България — сайтът е в изработка">
+  <meta property="og:image:alt" content="QuickWax — професионална грижа за вашия автомобил">
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Quickwax България — сайтът е в изработка">
-  <meta name="twitter:description" content="Каталогът и цените излизат скоро. За поръчки: sebaydinov.quickwax@gmail.com, +359 87 849 3448.">
+  <meta name="twitter:title" content="QuickWax България — Каталог на професионална автокозметика">
+  <meta name="twitter:description" content="Препарати за миене, активни пяни, восъци и грижа за интериора. Отворете каталога (PDF).">
   <meta name="twitter:image" content="https://quickwax.bg/og-image.png">
-  <meta name="twitter:image:alt" content="Quickwax България — сайтът е в изработка">
+  <meta name="twitter:image:alt" content="QuickWax — професионална грижа за вашия автомобил">
 
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23e51b1f'/%3E%3Ctext x='16' y='23' font-family='system-ui,sans-serif' font-size='19' font-weight='700' fill='%23fff' text-anchor='middle'%3EQ%3C/text%3E%3C/svg%3E">
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "QuickWax България",
+    "url": "https://quickwax.bg/",
+    "logo": "https://quickwax.bg/apple-touch-icon.png",
+    "image": "https://quickwax.bg/og-image.png",
+    "description": "МОЗЕРА ООД — ексклюзивен дистрибутор на QuickWax за България. Професионална автокозметика и аксесоари.",
+    "email": "sebaydinov.quickwax@gmail.com",
+    "telephone": "+359 87 849 3448"
+  }
+  </script>
 
   <style>
     :root {
@@ -37,19 +58,11 @@
       --text: #f4f4f4;
       --muted: #8f8f8f;
       --red: #e51b1f;
-      --line: #2b2b2b;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html,
-    body {
-      height: 100%;
-    }
+    html, body { height: 100%; }
 
     body {
       display: flex;
@@ -58,7 +71,6 @@
       min-height: 100vh;
       min-height: 100dvh;
       padding: 32px 24px;
-      overflow: hidden;
       background: var(--bg);
       background-image: radial-gradient(
         700px 420px at 50% 0%,
@@ -71,117 +83,56 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    .box {
-      width: 100%;
-      max-width: 460px;
-    }
-
     .brand {
       display: inline-block;
-      margin-bottom: 40px;
+      margin-bottom: 28px;
       color: var(--text);
       font-size: 15px;
       font-weight: 700;
       letter-spacing: 6px;
       text-transform: uppercase;
-      transition: transform 0.25s ease, text-shadow 0.25s ease;
     }
 
-    .brand:hover {
-      transform: translateY(-3px);
-      text-shadow: 0 0 22px rgba(229, 27, 31, 0.55);
-    }
+    .brand span { color: var(--red); }
 
-    .brand span {
-      color: var(--red);
-    }
+    h1 { font-size: clamp(22px, 5vw, 32px); font-weight: 700; line-height: 1.3; }
 
-    h1 {
-      font-size: clamp(26px, 6vw, 40px);
-      font-weight: 700;
-      line-height: 1.25;
-      letter-spacing: -0.6px;
-      margin-bottom: 16px;
-    }
+    p { color: var(--muted); font-size: 15px; line-height: 1.7; margin-top: 14px; }
 
-    p {
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    .rule {
-      width: 40px;
-      height: 2px;
-      margin: 34px auto 30px;
+    .cta {
+      display: inline-block;
+      margin-top: 26px;
+      padding: 14px 34px;
       background: var(--red);
-      border-radius: 2px;
-    }
-
-    .contact {
-      color: var(--muted);
-      font-size: 13.5px;
-      line-height: 1.9;
-    }
-
-    .contact strong {
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .map-link {
-      color: var(--red);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
       text-decoration: none;
-      border-bottom: 1px solid rgba(229, 27, 31, 0.45);
-      transition: border-color 0.2s ease, color 0.2s ease;
+      border-radius: 10px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .map-link:hover,
-    .map-link:focus-visible {
-      color: #ff4b4f;
-      border-color: #ff4b4f;
-    }
-
-    @media (max-height: 520px) {
-      .brand {
-        margin-bottom: 24px;
-      }
-
-      .rule {
-        margin: 22px auto 20px;
-      }
+    .cta:hover,
+    .cta:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(229, 27, 31, 0.4);
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .brand {
-        transition: none;
-      }
-
-      .brand:hover {
-        transform: none;
-      }
+      .cta { transition: none; }
     }
   </style>
 </head>
 
 <body>
-  <main class="box">
+  <main>
     <span class="brand">Quickwax<span>.bg</span></span>
-
-    <h1>Сайтът е в изработка</h1>
-
+    <h1>Отваряме каталога…</h1>
     <p>
-      За поръчки моля използвайте нашите контакти или елате във
-      <a class="map-link" href="https://maps.app.goo.gl/qB686QSoXybuo7rHA"
-         target="_blank" rel="noopener">физическия ни магазин</a>.
+      Ако той не се отвори автоматично,
+      <a href="QuickWax_catalog.pdf" style="color: var(--red);">натиснете тук</a>.
     </p>
-
-    <div class="rule" aria-hidden="true"></div>
-
-    <p class="contact">
-      <strong>sebaydinov.quickwax@gmail.com</strong><br>
-      <strong>+359 87 849 3448</strong>
-    </p>
+    <a class="cta" href="QuickWax_catalog.pdf">Разгледай каталога (PDF)</a>
   </main>
 </body>
 </html>
